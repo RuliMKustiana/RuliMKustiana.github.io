@@ -1,0 +1,343 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #508C9B;
+}
+
+#projects {
+  background-color: #508C9B;
+}
+
+#pengalaman {
+  background-color: #508C9B;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+/* My Keyboard Section */
+.keyboard-box {
+  position: relative;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.keyboard-box::before {
+  content: 'MY';
+  position: absolute;
+  color: #EEEEEE;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.keyboard-box:hover::before {
+  opacity: 0.2;
+}
+
+.keyboard-box::after {
+  content: 'GITHUB';
+  position: absolute;
+  color: #508C9B;
+  font-size: 4.3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.keyboard-box:hover::after {
+  opacity: 0.2;
+}
+
+.keyboard-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #508C9B;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.keyboard-box:hover .keyboard-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.keyboard-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.keyboard-box:hover .keyboard-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.keyboard-img {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 80px);
+  max-width: 350px;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.keyboard-box:hover .keyboard-img {
+  transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
+}
+
+.bg-collor {
+  background-color: #508C9B;
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #FEF3E2;
+}
+
+.experience-section {
+  width: 90%; /* Menyesuaikan lebar keseluruhan */
+  margin: 20px auto; /* Memberikan margin atas dan bawah */
+  font-family: Arial, sans-serif; /* Menentukan jenis font */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px; /* Mengurangi ukuran radius border */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Mengatur bayangan */
+  margin-bottom: 20px; /* Memberikan jarak antar kartu */
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px; /* Mengurangi padding untuk header */
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e1e1e1; /* Membuat garis tepi bawah yang lebih halus */
+  cursor: pointer;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 16px; /* Mengatur ukuran font untuk judul */
+  font-weight: normal; /* Mengurangi ketebalan font */
+  color: #333; /* Mengatur warna font */
+  display: flex;
+  align-items: center;
+  width: 100%; /* Mengisi keseluruhan lebar header */
+}
+
+.icon {
+  font-size: 22px; /* Mengatur ukuran ikon */
+  color: #4A90E2; /* Warna ikon */
+  margin-right: 10px; /* Jarak antara ikon dan teks */
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px; /* Posisi tombol di kanan */
+  color: #333; /* Warna tombol */
+}
+
+.card-content {
+  display: block; /* Menampilkan konten */
+  padding: 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #eee;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Kolom 1 untuk nama pendidikan, kolom 2 untuk isi */
+  margin-bottom: 15px;
+}
+
+.education-item h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold; /* Membuat teks pendidikan lebih tebal */
+  color: #333;
+}
+
+.education-item .description {
+  font-size: 14px;
+  color: #666;
+}
+
+.education-item hr {
+  grid-column: 1 / span 2; /* Garis pemisah berada di seluruh lebar grid */
+  margin-top: 10px;
+  border-top: 2px solid #508C9B;
+}
+
+@media (max-width: 768px) {
+  .education-item {
+    grid-template-columns: 1fr; /* Pada layar kecil, nama dan isi berada di atas/bawah */
+  }
+}
+
+
+.education-level h4 {
+  font-size: 14px; /* Mengatur ukuran font untuk subjudul */
+  margin-top: 0; /* Menghapus margin atas */
+}
+
+.education-level p {
+  font-size: 12px; /* Mengatur ukuran font untuk teks */
+  color: #666; /* Warna teks */
+  margin-bottom: 5px; /* Jarak antar baris */
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #e1e1e1; /* Warna garis */
+  margin: 10px 0; /* Jarak sebelum dan sesudah garis */
+}
+
+.jobs-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Kolom 1 untuk nama pendidikan, kolom 2 untuk isi */
+  margin-bottom: 15px;
+}
+
+.jobs-level h4 {
+  font-size: 14px; /* Mengatur ukuran font untuk subjudul */
+  margin-top: 0; /* Menghapus margin atas */
+}
+
+.jobs-level p {
+  font-size: 12px; /* Mengatur ukuran font untuk teks */
+  color: #666; /* Warna teks */
+  margin-bottom: 5px; /* Jarak antar baris */
+}
+
+#skills {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column; /* Ubah dari row menjadi column */
+  align-items: center;
+  margin-top: 30px;
+}
+
+.skill-category {
+  width: 100%;
+  max-width: 800px; /* Batas maksimal lebar tiap kategori */
+  margin: 20px 0; /* Jarak antar kategori skill */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category ul li {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+  padding-left: 25px;
+  position: relative;
+}
+
+.skill-category ul li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #3498db;
+}
+
+.software-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Grid dengan 3 kolom */
+  grid-gap: 30px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.software-skills div {
+  text-align: center;
+  font-size: 14px;
+}
+
+.software-skills img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.rounded-circle {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #000; /* Warna default hitam, Anda bisa menggantinya */
+}
+
+.social-icons a:hover {
+  color: #EEEEEE; /* Warna ketika hover, bisa diganti */
+}
+
+.social-icons i {
+  transition: color 0.3s ease;
+}
+
+.list-group-item i {
+  margin-right: 10px;
+  color: #508C9B;
+}
+
+
